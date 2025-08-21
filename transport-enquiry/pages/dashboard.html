@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body>
+  <!-- Sidebar and Main Content Toggle (Hamburger icon and sidebar from previous steps) -->
+  <div class="hamburger">&#9776;</div>
+  <div class="sidebar">
+    <button class="close-btn">&times;</button>
+    <ul>
+      <li><button class="nav-btn" data-target="dashboard">Dashboard</button></li>
+      <li><button class="nav-btn" data-target="search-transport">Search Transport</button></li>
+      <li><button class="nav-btn" data-target="history">History</button></li>
+      <li><button class="nav-btn" data-target="fare-calculator">Fare Calculator</button></li>
+      <li><button class="nav-btn" data-target="profile">Profile</button></li>
+      <li><button class="nav-btn" data-target="logout">Log Out</button></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+   <!-- Welcome Section -->
+<section class="dashboard-welcome">
+  <h1>Welcome back, John!</h1>
+  <p class="welcome-stats">Last login: May 5, 2025 at 10:23 AM</p>
+  <p class="welcome-stats">You tracked <strong>3 transports</strong> this week</p>
+</section>
+
+<!-- Quick Access Heading -->
+<h2 class="quick-access-heading">Quick Access</h2>
+
+<!-- Quick Access Cards -->
+<div class="quick-access-cards">
+  <div class="card">🚍 Track Transport</div>
+  <div class="card">📅 View Schedules</div>
+  <div class="card">📜 Transport History</div>
+  <div class="card">👤 Edit Profile</div>
+</div>
+
+
+      <!-- Recent Activity -->
+    <section class="recent-activity">
+  <h2>Recent Activity</h2>
+  <div class="activity-container">
+    <table class="activity-table">
+      <thead>
+        <tr>
+          <th>Date/Time</th>
+          <th>Transport Type</th>
+          <th>Route/ID</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>May 6, 2025 – 09:45 AM</td>
+          <td>Bus</td>
+          <td>#B1203</td>
+          <td class="status on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>May 5, 2025 – 05:20 PM</td>
+          <td>Truck</td>
+          <td>#T7834</td>
+          <td class="status delayed">Delayed</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+
+
+      <!-- Live Transport Overview -->
+      <h2>Live Transport Overview</h2>
+      <div class="map">[Live Transport Map or List]</div>
+
+      <!-- Upcoming Schedules -->
+<h2>Upcoming Schedules</h2>
+<div class="upcoming-schedules">
+  <ul>
+    <li>
+      <span>2025-05-06 08:00 AM</span> - Bus, Route 7
+    </li>
+    <li>
+      <span>2025-05-06 02:30 PM</span> - Truck, Route 4
+    </li>
+  </ul>
+</div>
+
+
+      <!-- Profile Summary and Notifications in the same line -->
+<div class="profile-summary-container">
+  <!-- Profile Summary Section -->
+  <div class="profile-summary">
+    <h2>Profile Summary</h2>
+    <p><strong>Name:</strong> John Doe</p>
+    <p><strong>Email:</strong> johndoe@example.com</p>
+    <button>Edit Profile</button>
+    <button>Change Password</button>
+  </div>
+
+  <!-- Notifications Section -->
+  <div class="notification">
+    <h2>Notifications</h2>
+    <p>Schedule Delay: Route 7 will be delayed by 15 minutes.</p>
+  </div>
+</div>
+    
+    <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Social Media</a></li>
+      </ul>
+    </div>
+  </footer>
+  </div>
+
+
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

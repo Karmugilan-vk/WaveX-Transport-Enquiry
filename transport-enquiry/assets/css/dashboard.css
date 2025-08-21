@@ -1,0 +1,467 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb; /* Light, soft background */
+  overflow-x: hidden;
+  display: flex;
+  transition: margin-left 0.3s ease;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #003092; /* Deep blue for sidebar */
+  color: white;
+  transition: left 0.3s ease;
+  padding-top: 50px;
+  z-index: 1000;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+}
+
+.sidebar ul li button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.sidebar ul li button:hover {
+  background-color: #00879e; /* Teal hover effect */
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  color: #ffffff; /* or match your sidebar text color */
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.sidebar .close-btn:hover {
+  background: none; /* removes hover background */
+  color: #ffab5b;    /* optional: soft color change on hover */
+}
+
+
+/* Main Content Styles */
+.main-content {
+  margin-left: 0;
+  width: 100%;
+  padding: 80px 20px 20px 20px; /* Top padding increased to clear hamburger area */
+  background: #ffffff;
+  transition: margin-left 0.3s ease;
+}
+
+
+/* Hamburger Icon */
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed; /* Position fixed for visibility even when sidebar is open */
+  top: 20px;
+  left: 20px;
+  color: #003092; /* Soft blue for hamburger icon */
+  z-index: 1001;
+}
+
+/* Dashboard Sections */
+h1, h2 {
+  color: #003092;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+/* Quick Access Cards */
+.quick-access {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #e6f4f9; /* Soft light blue for cards */
+  color: #003092;
+  padding: 20px;
+  width: 20%;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  background-color: #b5d7e8; /* Slightly darker hover effect */
+}
+
+/* Recent Activity Table */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #003092;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Live Transport Overview */
+.map {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Notifications */
+.notification {
+  background-color: #ffab5b; /* Soft orange for notifications */
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #003092; /* Soft blue for buttons */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #00879e; /* Teal hover effect */
+}
+
+/* Sidebar Open/Close */
+.sidebar.open {
+  left: 0;
+}
+
+.main-content.shifted {
+  margin-left: 250px; /* Move content to the right when sidebar is open */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    left: -100%;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  
+  .quick-access {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    margin: 10px 0;
+  }
+}
+
+.dashboard-welcome {
+  padding: 24px 0;
+  margin-bottom: 30px;
+  color: #003092;
+}
+
+.dashboard-welcome h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.welcome-stats {
+  font-size: 1.3rem;
+  color: #00879e;
+  margin-bottom: 5px;
+}
+
+
+.quick-access-heading {
+  font-size: 1.8rem;
+  margin: 30px 0 15px;
+  color: #003092;
+  font-weight: 600;
+}
+
+.quick-access-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.quick-access-cards .card {
+  background-color: #fff2db;
+  color: #003092;
+  border-radius: 14px;
+  padding: 24px;
+  min-width: 180px;
+  text-align: center;
+  flex: 1;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.quick-access-cards .card:hover {
+  transform: translateY(-6px);
+  background-color: #ffdab9;
+}
+
+.recent-activity {
+  padding: 24px 0;
+}
+
+.recent-activity h2 {
+  font-size: 1.8rem;
+  color: #003092;
+  margin-bottom: 16px;
+}
+
+.activity-container {
+  overflow-x: auto;
+}
+
+.activity-table thead {
+  background-color: #003092; /* Deep blue background */
+  color: white; /* White text color */
+}
+
+.activity-table th {
+  font-size: 1.2rem; /* Adjust font size */
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 2px solid #ffab5b; /* Add a light border for visibility */
+}
+
+.activity-table thead th {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Optional text shadow */
+}
+
+.activity-table td {
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 1rem;
+  color: #003092;
+  border-bottom: 1px solid #eee;
+}
+
+.activity-table th:first-child {
+  border-top-left-radius: 12px;
+}
+
+.activity-table th:last-child {
+  border-top-right-radius: 12px;
+}
+
+.activity-table tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+.activity-table tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+.status.on-time {
+  color: #00879e;
+  font-weight: bold;
+}
+
+.status.delayed {
+  color: #ff5e5b;
+  font-weight: bold;
+}
+
+/* Upcoming Schedules Section */
+.upcoming-schedules {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.upcoming-schedules h2 {
+  color: #003092;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.upcoming-schedules ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.upcoming-schedules li {
+  font-size: 1.1rem;
+  color: #003092;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd; /* Light border for structure */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upcoming-schedules li span {
+  font-weight: 500;
+  color: #00879e;
+}
+
+/* Profile Summary and Notifications in Same Line, Filling the Page */
+.profile-summary-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* Space between the two sections */
+  margin-top: 20px;
+  width: 100%; /* Ensure the container fills the page */
+}
+
+.profile-summary,
+.notification {
+  background-color: #fff2db; /* Soft light background for profile section */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  flex: 1; /* Make each section take equal width */
+  min-width: 48%; /* Ensure each section has a minimum width */
+  max-width: 48%; /* Restrict the width for better visual appeal */
+}
+
+.notification {
+  background-color: #ffab5b; /* Soft orange for notifications */
+}
+
+.profile-summary h2,
+.notification h2 {
+  color: #003092;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.profile-summary p,
+.notification p {
+  font-size: 1.1rem;
+  color: #003092;
+  margin-bottom: 12px;
+}
+
+.profile-summary button,
+.notification button {
+  background-color: #003092; /* Blue button for consistency */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.profile-summary button:hover,
+.notification button:hover {
+  background-color: #00879e; /* Teal hover effect */
+}
+
+.profile-summary p strong,
+.notification p strong {
+  font-weight: bold;
+  color: #00879e; /* Highlight user details with teal */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #003092; /* Blue background for footer */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px; /* To keep it centered */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer-links li {
+  margin: 0;
+}
+
+.footer-links a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffab5b; /* Soft orange for hover effect */
+}
+

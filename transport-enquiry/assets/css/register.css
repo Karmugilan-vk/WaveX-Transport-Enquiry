@@ -1,0 +1,151 @@
+/* Color Palette */
+:root {
+  --deep-blue: #003092;
+  --teal-blue: #00879E;
+  --warm-orange: #FFAB5B;
+  --light-cream: #FFF2DB;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Layout */
+body {
+  height: 100vh;
+  background: var(--light-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-container {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Side - Form */
+.register-form {
+  flex: 1;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--deep-blue);
+  margin-bottom: 20px;
+}
+
+.register-form h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: var(--deep-blue);
+}
+
+.register-form p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 500;
+  color: var(--teal-blue);
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+form button {
+  width: 100%;
+  background-color: var(--warm-orange);
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #e1964d;
+}
+
+.login-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: var(--deep-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Right Side - Image Panel */
+.register-image {
+  flex: 1;
+  background: url('images/register-bg.png') no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-text {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 48, 146, 0.6);
+  border-radius: 12px;
+  max-width: 80%;
+}
+
+.overlay-text h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #FFF2DB;
+}
+
+.overlay-text p {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+  }
+
+  .register-image {
+    height: 200px;
+  }
+
+  .overlay-text {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
